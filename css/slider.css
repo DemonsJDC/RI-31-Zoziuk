@@ -1,0 +1,191 @@
+#special-offers .swiper {
+    height: 1040px;
+}
+
+#special-offers .swiper .swiper-wrapper .swiper-slide {
+	display: flex;
+	height: 1040px;
+	width: 100%;
+    justify-content: end;
+	align-items: end;
+
+}
+
+#special-offers .swiper-pagination-bullet {
+  width: 50px;
+  height: 5px;
+  background: rgba(217,217,217, 0.6);
+  border-radius: 50px;
+  transition: background 0.2s ease-in-out;
+    margin: 0 4px;
+}
+
+#special-offers .swiper-pagination-bullet:hover {
+    background: rgba(240, 240, 240, 1);
+    transition: background 0.2s ease-in-out;
+}
+
+#special-offers .swiper-pagination-bullet-active {
+  background: rgba(217,217,217, 1);
+}
+
+#special-offers .swiper-button-prev, #special-offers .swiper-button-next {
+ 
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static !important;
+  margin: 0;
+  padding: 0;
+  pointer-events: auto;
+}
+
+#special-offers .swiper-button-prev{
+ opacity: 50%;
+ transition: opacity 0.2s ease-in-out;
+}
+
+#special-offers .swiper-button-prev:hover {
+    opacity: 100%;
+     transition: opacity 0.2s ease-in-out;
+}
+
+
+#special-offers .swiper-button-next {
+   opacity: 50%;
+   transition: opacity 0.2s ease-in-out;
+}
+
+#special-offers .swiper-button-next:hover {
+   opacity: 100%;
+   transition: opacity 0.2s ease-in-out;
+}
+
+/* Ховаємо дефолтні стрілки */
+#special-offers .swiper-button-prev::after,
+#special-offers .swiper-button-next::after {
+  display: none;
+}
+
+#special-offers .swiper-button-prev svg,
+#special-offers .swiper-button-next svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}   
+
+#special-offers .swiper .custom-slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  position: relative;
+  top: -40px;
+}
+
+/* Інший слайдер */
+
+#our-models .swiper {
+    height: 85%;
+    overflow: hidden; /* ховає зайву 5-ту картку */
+    
+}
+
+#our-models .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+}
+
+#our-models .swiper-button-prev svg,
+#our-models .swiper-button-next svg {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}  
+
+
+#our-models .swiper-button-prev{
+ opacity: 50%;
+ transition: opacity 0.2s ease-in-out;
+}
+
+#our-models .swiper-button-prev:hover {
+    opacity: 100%;
+     transition: opacity 0.2s ease-in-out;
+}
+
+
+#our-models .swiper-button-next {
+   opacity: 50%;
+   transition: opacity 0.2s ease-in-out;
+}
+
+#our-models .swiper-button-next:hover {
+   opacity: 100%;
+   transition: opacity 0.2s ease-in-out;
+}
+
+#our-models  .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(217,217,217, 0.6);
+  border-radius: 50px;
+  transition: background 0.2s ease-in-out;
+    margin: 0 4px;
+}
+
+#our-models  .swiper-pagination-bullet:hover {
+    background: rgba(240, 240, 240, 1);
+    transition: background 0.2s ease-in-out;
+}
+
+#our-models  .swiper-pagination-bullet-active {
+  background: rgba(217,217,217, 1);
+}
+/* некст слайдер */
+
+#for-owners .swiper-slide {
+position: relative;
+}
+
+/* #for-owners .swiper-pagination-bullet {
+  width: 50px;
+  height: 5px;
+  background: rgba(217,217,217, 0.6);
+  border-radius: 50px;
+  transition: background 0.2s ease-in-out;
+    margin: 0 4px;
+}
+
+#for-owners .swiper-pagination-bullet:hover {
+    background: rgba(240, 240, 240, 1);
+    transition: background 0.2s ease-in-out;
+}
+
+#for-owners .swiper-pagination-bullet-active {
+  background: rgba(217,217,217, 1);
+} */
+
+@media (max-width: 750px) {
+
+  #special-offers .swiper {
+      height: 750px;
+  }
+
+  #special-offers .swiper .swiper-wrapper .swiper-slide {
+	display: flex;
+	height: 750px;
+	width: 100%;
+    justify-content: end;
+	align-items: end;
+
+}
+
+}

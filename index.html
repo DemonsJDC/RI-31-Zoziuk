@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Autosalon</title>
+
+	<link rel="stylesheet" href="css/style.css"> <!-- підлючення файлу зі стилями -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- підключення вже готового слайдеру -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="css/slider.css"/>
+</head>
+
+	<header>
+
+		<!-- верх сайту -->
+
+		<nav>
+            
+            <div class="design">
+                <div id="design-main-blue-rectegle"></div>
+                <div id="design-green"></div>
+                <div id="design-green-rectengle"></div>
+                <div id="design-blue"></div>
+                <div id="design-blue-rectengle"></div>
+            </div>
+
+           <div class="nav-display">
+                <div class="logo">
+                    <img src="image/logo.png" alt="LOGO">
+                </div>
+
+                <div class="menu">
+                    <a href="#Special-offers">Special offers</a>
+                    <a href="#Models">Models</a>
+                    <a href="#For-owners">For owners</a>
+                </div>
+
+                
+                <div class="header-icons">
+                    <div class="search-header">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.66667 3.5C9.96783 3.5 11.8333 5.36548 11.8333 7.66667M12.3823 12.3791L16 16M14.3333 7.66667C14.3333 11.3486 11.3486 14.3333 7.66667 14.3333C3.98477 14.3333 1 11.3486 1 7.66667C1 3.98477 3.98477 1 7.66667 1C11.3486 1 14.3333 3.98477 14.3333 7.66667Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </div>
+                    <div class="online-chat-header">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 3.5C14.366 3.5 17.5 6.634 17.5 10.5V14.9545C17.5 15.6953 17.5 16.0657 17.3897 16.3615C17.2123 16.8372 16.8372 17.2123 16.3615 17.3897C16.0657 17.5 15.6953 17.5 14.9545 17.5H10.5C6.634 17.5 3.5 14.366 3.5 10.5"  stroke-width="2"/>
+                            <path d="M7.875 9.625H13.125"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.375 7V1.75"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.75 4.375H7"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 13.125H13.125"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <input id="tab-checkbox" type="checkbox" hidden>
+                    <label for="tab-checkbox" class="tab-header">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_11_64)">
+                                <path d="M14.0999 10.9502L10.9358 7.86335C10.837 7.76688 10.7815 7.63607 10.7815 7.49968C10.7815 7.36329 10.837 7.23248 10.9358 7.136L14.0999 4.04911C14.4308 3.72692 15 3.95586 15 4.41311V10.5869C15 11.047 14.4288 11.2718 14.0999 10.9502ZM0.761719 12.6448H14.4727C14.6125 12.6448 14.7466 12.699 14.8455 12.7955C14.9444 12.892 15 13.0228 15 13.1593V14.1883C15 14.3247 14.9444 14.4556 14.8455 14.5521C14.7466 14.6485 14.6125 14.7027 14.4727 14.7027H0.761719C0.621859 14.7027 0.487726 14.6485 0.38883 14.5521C0.289934 14.4556 0.234375 14.3247 0.234375 14.1883V13.1593C0.234375 13.0228 0.289934 12.892 0.38883 12.7955C0.487726 12.699 0.621859 12.6448 0.761719 12.6448ZM0.657238 8.52896H8.24901C8.30455 8.52892 8.35956 8.53956 8.41089 8.56028C8.46221 8.581 8.50884 8.61138 8.54812 8.6497C8.58739 8.68802 8.61854 8.73351 8.63977 8.78359C8.66101 8.83366 8.67192 8.88732 8.67188 8.94151V10.1743C8.67192 10.2285 8.66101 10.2822 8.63977 10.3323C8.61854 10.3823 8.58739 10.4278 8.54812 10.4662C8.50884 10.5045 8.46221 10.5349 8.41089 10.5556C8.35956 10.5763 8.30455 10.5869 8.24901 10.5869H0.657238C0.601695 10.5869 0.546688 10.5763 0.495364 10.5556C0.44404 10.5349 0.397408 10.5045 0.358132 10.4662C0.318857 10.4278 0.28771 10.3823 0.266475 10.3323C0.245239 10.2822 0.234332 10.2285 0.234375 10.1743V8.94151C0.234332 8.88732 0.245239 8.83366 0.266475 8.78359C0.28771 8.73351 0.318857 8.68802 0.358132 8.6497C0.397408 8.61138 0.44404 8.581 0.495364 8.56028C0.546688 8.53956 0.601695 8.52892 0.657238 8.52896ZM0.657238 4.41311H8.24901C8.30455 4.41307 8.35956 4.42371 8.41089 4.44443C8.46221 4.46515 8.50884 4.49553 8.54812 4.53385C8.58739 4.57217 8.61854 4.61766 8.63977 4.66773C8.66101 4.71781 8.67192 4.77147 8.67188 4.82566V6.05849C8.67192 6.11268 8.66101 6.16634 8.63977 6.21641C8.61854 6.26648 8.58739 6.31198 8.54812 6.3503C8.50884 6.38862 8.46221 6.419 8.41089 6.43972C8.35956 6.46044 8.30455 6.47108 8.24901 6.47104H0.657238C0.601695 6.47108 0.546688 6.46044 0.495364 6.43972C0.44404 6.419 0.397408 6.38862 0.358132 6.3503C0.318857 6.31198 0.28771 6.26648 0.266475 6.21641C0.245239 6.16634 0.234332 6.11268 0.234375 6.05849V4.82566C0.234332 4.77147 0.245239 4.71781 0.266475 4.66773C0.28771 4.61766 0.318857 4.57217 0.358132 4.53385C0.397408 4.49553 0.44404 4.46515 0.495364 4.44443C0.546688 4.42371 0.601695 4.41307 0.657238 4.41311ZM0.761719 0.297256H14.4727C14.6125 0.297256 14.7466 0.351461 14.8455 0.447945C14.9444 0.544429 15 0.675289 15 0.811738V1.8407C15 1.97715 14.9444 2.10801 14.8455 2.20449C14.7466 2.30098 14.6125 2.35518 14.4727 2.35518H0.761719C0.621859 2.35518 0.487726 2.30098 0.38883 2.20449C0.289934 2.10801 0.234375 1.97715 0.234375 1.8407V0.811738C0.234375 0.675289 0.289934 0.544429 0.38883 0.447945C0.487726 0.351461 0.621859 0.297256 0.761719 0.297256Z" fill="white"  stroke-width="0.00155"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_11_64">
+                                <rect width="15" height="15" fill="green" transform="matrix(-1 0 0 1 15 0)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </label>
+                        <ul class="tab-menu">
+                            <li id="hider"><a href="#Special-offers">Special offers</a></li>
+                            <li id="hider"><a href="#Models">Models</a></li>
+                            <li id="hider"><a href="#For-owners">For owners</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Online chat</a></li>
+                            <li><a href="#">Test drive</a></li>
+                            <li><a href="#">Car configurator</a></li>
+                            <li><a href="#">Loan calculation</a></li>
+                            <li><a href="#">News and promotions</a></li>
+                            <li><a href="#">Become a dealer</a></li>
+                        </ul>
+                </div>
+            </div>
+		</nav>
+
+
+		<div class="bg-img">
+            <div class="first-msg">
+                <div class="design-header-left-line"></div>
+                <h1>THE BEST CARS - ONLY OURS CARS</h1>
+                <div class="design-header-top-line"></div>
+                <p>Discover top-quality vehicles handpicked for performance, style, and reliability. Only the best, only ours.</p>
+                <div class="design-header-bottom-line"></div>
+                <a href="about">
+                    <div class="button-header">READMORE</div>
+                </a>
+            </div>
+            <div class="mini-description">
+                <h3>Sentocado SPT</h3>
+                <div class="design-bottom-mini-line"></div>
+            </div>
+		</div>
+
+
+
+		<!-- верх сайту -->
+
+	</header>
+    <main>
+        <!-- мейн частина сайту -->
+        <section id="special-offers">
+			<h2>special offers</h2>
+                 <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="image/sotc1.jpg" alt="some picture" id="img1"/>
+                             <div class="slide-text">
+                                 <div class="second-msg">
+                                    <div class="design-fsc-left-line"></div>
+                                    <h1>Lightning GT</h1>
+                                    <div class="design-fsc-top-line"></div>
+                                    <p>Experience speed and style with the Lightning GT — now available at a special offer. Limited time only!</p>
+                                    <div class="design-fsc-bottom-line"></div>
+                                    <a href="about">
+                                        <div class="button-fsc">READMORE</div>
+                                    </a>
+                                 </div>
+                        </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/sotc2.png"alt="some picture" id="img2"/>
+                            <div class="slide-text">
+                                 <div class="second-msg"> <div class="second-msg">
+                                    <div class="design-fsc-left-line"></div>
+                                    <h1>Lightning GT</h1>
+                                    <div class="design-fsc-top-line"></div>
+                                    <p>Experience speed and style with the Lightning GT — now available at a special offer. Limited time only!</p>
+                                    <div class="design-fsc-bottom-line"></div>
+                                    <a href="about">
+                                        <div class="button-fsc">READMORE</div>
+                                    </a>
+                                 </div></div>
+                             </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/sotc3.jpg"alt="some picture" id="img3"/>
+                            <div class="slide-text">
+                                 <div class="second-msg"> <div class="second-msg">
+                                    <div class="design-fsc-left-line"></div>
+                                    <h1>Lightning GT</h1>
+                                    <div class="design-fsc-top-line"></div>
+                                    <p>Experience speed and style with the Lightning GT — now available at a special offer. Limited time only!</p>
+                                    <div class="design-fsc-bottom-line"></div>
+                                    <a href="about">
+                                        <div class="button-fsc">READMORE</div>
+                                    </a>
+                                 </div></div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="custom-slider-controls">
+                                <div class="swiper-button-prev">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.8" d="M0.158853 6.11694L6.11705 0.158714C6.21833 0.0568739 6.35592 0 6.50001 0H12.4582C12.6771 0 12.8753 0.131622 12.9587 0.33421C13.0427 0.536798 12.9961 0.769702 12.8412 0.924607L7.26593 6.49987L12.8412 12.0752C12.9961 12.2301 13.0427 12.463 12.9587 12.6656C12.8753 12.8681 12.677 12.9998 12.4582 12.9998H6.49999C6.3559 12.9998 6.21833 12.9429 6.11703 12.8411L0.158802 6.88283C-0.0529518 6.67105 -0.0529518 6.32872 0.158853 6.11694Z" fill="#D9D9D9"/>
+                                </svg>
+                        </div>
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-next">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_42_33)">
+                                    <path opacity="0.8" d="M12.8411 6.11718L6.88295 0.158958C6.78167 0.057118 6.64408 0.000244141 6.49999 0.000244141H0.541763C0.322925 0.000244141 0.124679 0.131867 0.0412724 0.334454C-0.0426927 0.537042 0.00389817 0.769946 0.158803 0.924851L5.73407 6.50012L0.158829 12.0754C0.00392356 12.2303 -0.0426673 12.4632 0.0412978 12.6658C0.124704 12.8684 0.322951 13 0.541788 13H6.50001C6.6441 13 6.78167 12.9431 6.88297 12.8413L12.8412 6.88308C13.053 6.6713 13.053 6.32896 12.8411 6.11718Z" fill="#D9D9D9"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_42_33">
+                                        <rect width="13" height="13" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                        </div>
+                    </div>
+                </div>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script src="js/slider.js"></script>
+		</section>
+
+        <section id="our-models">
+			<h2>our models</h2>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- 1ст на пк -->
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+                        <!-- 2ст на пк -->
+
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+                        <!-- 3ст на пк -->
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+
+                        <div class="swiper-slide">
+
+                                <div class="price-block">
+                                    <img src="image/salecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Storm Rider X</h3>
+                                    <div class="design-line-2"></div>
+                                    <ul>
+                                        <li>Panoramic roof</li>
+                                        <li>Adaptive cruise control system</li>
+                                        <li>Perforated eco-leather seats</li>
+                                    </ul>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                                <div class="price-block">
+                                    <img src="image/othersalecar.png">
+                                    <div class="design-line-1"></div>
+                                    <h3>Other models</h3>
+                                    <div class="design-line-2"></div>
+                                    <p class="bite-text">
+                                        Check out more of our cars — from sporty rides to family-friendly models, we have something for everyone.
+                                    </p>
+                                    <div class="design-line-1"></div>
+                                    <p>Price from: 2.150.000₴</p>
+                                    <div class="design-line-2"></div>
+                                    <div class="button">READ MORE</div>
+                                </div>
+                        </div>
+                    </div>
+                <div class="custom-slider-controls">
+                        <div class="swiper-button-prev">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.8" d="M0.158853 6.11694L6.11705 0.158714C6.21833 0.0568739 6.35592 0 6.50001 0H12.4582C12.6771 0 12.8753 0.131622 12.9587 0.33421C13.0427 0.536798 12.9961 0.769702 12.8412 0.924607L7.26593 6.49987L12.8412 12.0752C12.9961 12.2301 13.0427 12.463 12.9587 12.6656C12.8753 12.8681 12.677 12.9998 12.4582 12.9998H6.49999C6.3559 12.9998 6.21833 12.9429 6.11703 12.8411L0.158802 6.88283C-0.0529518 6.67105 -0.0529518 6.32872 0.158853 6.11694Z" fill="#D9D9D9"/>
+                            </svg>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-next">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_42_33)">
+                                    <path opacity="0.8" d="M12.8411 6.11718L6.88295 0.158958C6.78167 0.057118 6.64408 0.000244141 6.49999 0.000244141H0.541763C0.322925 0.000244141 0.124679 0.131867 0.0412724 0.334454C-0.0426927 0.537042 0.00389817 0.769946 0.158803 0.924851L5.73407 6.50012L0.158829 12.0754C0.00392356 12.2303 -0.0426673 12.4632 0.0412978 12.6658C0.124704 12.8684 0.322951 13 0.541788 13H6.50001C6.6441 13 6.78167 12.9431 6.88297 12.8413L12.8412 6.88308C13.053 6.6713 13.053 6.32896 12.8411 6.11718Z" fill="#D9D9D9"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_42_33">
+                                    <rect width="13" height="13" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script src="js/second-slider.js"></script>      
+            </div>
+         </section>
+
+         <section id="for-owners">
+             
+            <h2>for owners</h2>
+
+              <div class="content">
+                <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="display-content">
+                            <h3>Maintence</h3>
+                            <div class="design-under-line"></div>
+                            <p>Professional vehicle maintenance services to keep your car running smoothly and safely. From routine check-ups to complex repairs, our experts ensure top performance.</p>
+                        </div>
+                        <img src="image/slide1.png">
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="display-content">
+                            <h3>Maintence</h3>
+                            <div class="design-under-line"></div>
+                            <p>Professional vehicle maintenance services to keep your car running smoothly and safely. From routine check-ups to complex repairs, our experts ensure top performance.</p>
+                        </div>
+                        <img src="image/slide1.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="display-content">
+                            <h3>Maintence</h3>
+                            <div class="design-under-line"></div>
+                            <p>Professional vehicle maintenance services to keep your car running smoothly and safely. From routine check-ups to complex repairs, our experts ensure top performance.</p>
+                        </div>
+                        <img src="image/slide1.png">
+
+                    </div>
+                </div>
+                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                <script src="js/third-slider.js"></script>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                </div>
+            </div>
+
+            <div class="design-owners">
+                <div class="design-lock">
+
+                    <div id="design-green-left"></div>
+                    <div id="design-green-right"></div>
+
+                    <div id="design-blue-left-top"></div>
+                    <div id="design-blue-left"></div>
+                    <div id="design-blue-left-bottom"></div>
+
+                    <div id="design-blue-right-top"></div>
+                    <div id="design-blue-right"></div>
+                    <div id="design-blue-right-bottom"></div>
+
+                    <div id="display-green-main-center">
+                        <div id="design-green-main">
+                            <div class="button">READ MORE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+         </section>
+    </main>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3 class="footer-font-style">SOCIAL NETWORKS</h3>
+      <div class="social-icons">
+                    <a href="#"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.125 2.08325H16.875C20.2083 2.08325 22.9167 4.79159 22.9167 8.12492V16.8749C22.9167 18.4773 22.2801 20.014 21.1471 21.147C20.0141 22.2801 18.4774 22.9166 16.875 22.9166H8.125C4.79167 22.9166 2.08334 20.2083 2.08334 16.8749V8.12492C2.08334 6.52257 2.71987 4.98585 3.8529 3.85282C4.98593 2.71978 6.52265 2.08325 8.125 2.08325ZM7.91667 4.16659C6.92211 4.16659 5.96828 4.56167 5.26502 5.26493C4.56176 5.9682 4.16667 6.92202 4.16667 7.91658V17.0833C4.16667 19.1562 5.84375 20.8333 7.91667 20.8333H17.0833C18.0779 20.8333 19.0317 20.4382 19.735 19.7349C20.4382 19.0316 20.8333 18.0778 20.8333 17.0833V7.91658C20.8333 5.84367 19.1563 4.16659 17.0833 4.16659H7.91667ZM17.9688 5.72909C18.3141 5.72909 18.6453 5.86627 18.8895 6.11046C19.1337 6.35464 19.2708 6.68583 19.2708 7.03117C19.2708 7.3765 19.1337 7.70769 18.8895 7.95188C18.6453 8.19607 18.3141 8.33325 17.9688 8.33325C17.6234 8.33325 17.2922 8.19607 17.048 7.95188C16.8039 7.70769 16.6667 7.3765 16.6667 7.03117C16.6667 6.68583 16.8039 6.35464 17.048 6.11046C17.2922 5.86627 17.6234 5.72909 17.9688 5.72909ZM12.5 7.29158C13.8813 7.29158 15.2061 7.84032 16.1828 8.81707C17.1596 9.79382 17.7083 11.1186 17.7083 12.4999C17.7083 13.8813 17.1596 15.206 16.1828 16.1828C15.2061 17.1595 13.8813 17.7083 12.5 17.7083C11.1187 17.7083 9.79391 17.1595 8.81715 16.1828C7.8404 15.206 7.29167 13.8813 7.29167 12.4999C7.29167 11.1186 7.8404 9.79382 8.81715 8.81707C9.79391 7.84032 11.1187 7.29158 12.5 7.29158ZM12.5 9.37492C11.6712 9.37492 10.8763 9.70416 10.2903 10.2902C9.70424 10.8763 9.375 11.6711 9.375 12.4999C9.375 13.3287 9.70424 14.1236 10.2903 14.7096C10.8763 15.2957 11.6712 15.6249 12.5 15.6249C13.3288 15.6249 14.1237 15.2957 14.7097 14.7096C15.2958 14.1236 15.625 13.3287 15.625 12.4999C15.625 11.6711 15.2958 10.8763 14.7097 10.2902C14.1237 9.70416 13.3288 9.37492 12.5 9.37492Z" fill="white"/>
+            </svg>
+            </a>
+                    <a href="#"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.125 2.08325H16.875C20.2083 2.08325 22.9167 4.79159 22.9167 8.12492V16.8749C22.9167 18.4773 22.2801 20.014 21.1471 21.147C20.0141 22.2801 18.4774 22.9166 16.875 22.9166H8.125C4.79167 22.9166 2.08334 20.2083 2.08334 16.8749V8.12492C2.08334 6.52257 2.71987 4.98585 3.8529 3.85282C4.98593 2.71978 6.52265 2.08325 8.125 2.08325ZM7.91667 4.16659C6.92211 4.16659 5.96828 4.56167 5.26502 5.26493C4.56176 5.9682 4.16667 6.92202 4.16667 7.91658V17.0833C4.16667 19.1562 5.84375 20.8333 7.91667 20.8333H17.0833C18.0779 20.8333 19.0317 20.4382 19.735 19.7349C20.4382 19.0316 20.8333 18.0778 20.8333 17.0833V7.91658C20.8333 5.84367 19.1563 4.16659 17.0833 4.16659H7.91667ZM17.9688 5.72909C18.3141 5.72909 18.6453 5.86627 18.8895 6.11046C19.1337 6.35464 19.2708 6.68583 19.2708 7.03117C19.2708 7.3765 19.1337 7.70769 18.8895 7.95188C18.6453 8.19607 18.3141 8.33325 17.9688 8.33325C17.6234 8.33325 17.2922 8.19607 17.048 7.95188C16.8039 7.70769 16.6667 7.3765 16.6667 7.03117C16.6667 6.68583 16.8039 6.35464 17.048 6.11046C17.2922 5.86627 17.6234 5.72909 17.9688 5.72909ZM12.5 7.29158C13.8813 7.29158 15.2061 7.84032 16.1828 8.81707C17.1596 9.79382 17.7083 11.1186 17.7083 12.4999C17.7083 13.8813 17.1596 15.206 16.1828 16.1828C15.2061 17.1595 13.8813 17.7083 12.5 17.7083C11.1187 17.7083 9.79391 17.1595 8.81715 16.1828C7.8404 15.206 7.29167 13.8813 7.29167 12.4999C7.29167 11.1186 7.8404 9.79382 8.81715 8.81707C9.79391 7.84032 11.1187 7.29158 12.5 7.29158ZM12.5 9.37492C11.6712 9.37492 10.8763 9.70416 10.2903 10.2902C9.70424 10.8763 9.375 11.6711 9.375 12.4999C9.375 13.3287 9.70424 14.1236 10.2903 14.7096C10.8763 15.2957 11.6712 15.6249 12.5 15.6249C13.3288 15.6249 14.1237 15.2957 14.7097 14.7096C15.2958 14.1236 15.625 13.3287 15.625 12.4999C15.625 11.6711 15.2958 10.8763 14.7097 10.2902C14.1237 9.70416 13.3288 9.37492 12.5 9.37492Z" fill="white"/>
+            </svg>
+            </a>
+                    <a href="#"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.125 2.08325H16.875C20.2083 2.08325 22.9167 4.79159 22.9167 8.12492V16.8749C22.9167 18.4773 22.2801 20.014 21.1471 21.147C20.0141 22.2801 18.4774 22.9166 16.875 22.9166H8.125C4.79167 22.9166 2.08334 20.2083 2.08334 16.8749V8.12492C2.08334 6.52257 2.71987 4.98585 3.8529 3.85282C4.98593 2.71978 6.52265 2.08325 8.125 2.08325ZM7.91667 4.16659C6.92211 4.16659 5.96828 4.56167 5.26502 5.26493C4.56176 5.9682 4.16667 6.92202 4.16667 7.91658V17.0833C4.16667 19.1562 5.84375 20.8333 7.91667 20.8333H17.0833C18.0779 20.8333 19.0317 20.4382 19.735 19.7349C20.4382 19.0316 20.8333 18.0778 20.8333 17.0833V7.91658C20.8333 5.84367 19.1563 4.16659 17.0833 4.16659H7.91667ZM17.9688 5.72909C18.3141 5.72909 18.6453 5.86627 18.8895 6.11046C19.1337 6.35464 19.2708 6.68583 19.2708 7.03117C19.2708 7.3765 19.1337 7.70769 18.8895 7.95188C18.6453 8.19607 18.3141 8.33325 17.9688 8.33325C17.6234 8.33325 17.2922 8.19607 17.048 7.95188C16.8039 7.70769 16.6667 7.3765 16.6667 7.03117C16.6667 6.68583 16.8039 6.35464 17.048 6.11046C17.2922 5.86627 17.6234 5.72909 17.9688 5.72909ZM12.5 7.29158C13.8813 7.29158 15.2061 7.84032 16.1828 8.81707C17.1596 9.79382 17.7083 11.1186 17.7083 12.4999C17.7083 13.8813 17.1596 15.206 16.1828 16.1828C15.2061 17.1595 13.8813 17.7083 12.5 17.7083C11.1187 17.7083 9.79391 17.1595 8.81715 16.1828C7.8404 15.206 7.29167 13.8813 7.29167 12.4999C7.29167 11.1186 7.8404 9.79382 8.81715 8.81707C9.79391 7.84032 11.1187 7.29158 12.5 7.29158ZM12.5 9.37492C11.6712 9.37492 10.8763 9.70416 10.2903 10.2902C9.70424 10.8763 9.375 11.6711 9.375 12.4999C9.375 13.3287 9.70424 14.1236 10.2903 14.7096C10.8763 15.2957 11.6712 15.6249 12.5 15.6249C13.3288 15.6249 14.1237 15.2957 14.7097 14.7096C15.2958 14.1236 15.625 13.3287 15.625 12.4999C15.625 11.6711 15.2958 10.8763 14.7097 10.2902C14.1237 9.70416 13.3288 9.37492 12.5 9.37492Z" fill="white"/>
+            </svg>
+            </a>
+      </div>
+      <h3>CONTACT US</h3>
+      <div class="bg-for-contact">
+        <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.3575 2.92125C1.8975 3.9825 2.7675 4.8525 3.82875 5.3925L4.65375 4.5675C4.75875 4.4625 4.905 4.4325 5.03625 4.47375C5.45625 4.6125 5.90625 4.6875 6.375 4.6875C6.47446 4.6875 6.56984 4.72701 6.64017 4.79734C6.71049 4.86766 6.75 4.96304 6.75 5.0625V6.375C6.75 6.47446 6.71049 6.56984 6.64017 6.64017C6.56984 6.71049 6.47446 6.75 6.375 6.75C4.68425 6.75 3.06274 6.07835 1.86719 4.88281C0.67165 3.68726 0 2.06576 0 0.375C0 0.275544 0.0395088 0.180161 0.109835 0.109835C0.180161 0.0395088 0.275544 0 0.375 0H1.6875C1.78696 0 1.88234 0.0395088 1.95266 0.109835C2.02299 0.180161 2.0625 0.275544 2.0625 0.375C2.0625 0.84375 2.1375 1.29375 2.27625 1.71375C2.3175 1.845 2.2875 1.99125 2.1825 2.09625L1.3575 2.92125Z" fill="white"/>
+        </svg>
+            <p>+380 67 123 45 67</p>
+      </div>
+      <div class="bg-for-contact">
+        <svg class="email" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.2 1.5L4 3.375L0.8 1.5V0.75L4 2.625L7.2 0.75M7.2 0H0.8C0.356 0 0 0.33375 0 0.75V5.25C0 5.44891 0.0842854 5.63968 0.234315 5.78033C0.384344 5.92098 0.587827 6 0.8 6H7.2C7.41217 6 7.61566 5.92098 7.76569 5.78033C7.91571 5.63968 8 5.44891 8 5.25V0.75C8 0.551088 7.91571 0.360322 7.76569 0.21967C7.61566 0.0790176 7.41217 0 7.2 0Z" fill="white"/>
+        </svg>
+
+              <p>info@company.com</p>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>SPECIAL OFFERS</h3>
+      <ul>
+        <li><a href="#">Lightning GT</a></li>
+        <li><a href="#">Lightning GT</a></li>
+        <li><a href="#">Lightning GT</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>MODELS</h3>
+      <ul>
+        <li><a href="#">Storm Rider X</a></li>
+        <li><a href="#">Storm Rider X</a></li>
+        <li><a href="#">Storm Rider X</a></li>
+        <li><a href="#">More</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>FOR OWNERS</h3>
+      <ul>
+        <li><a href="#">MAINTENANCE</a></li>
+        <li><a href="#">MAINTENANCE</a></li>
+        <li><a href="#">MAINTENANCE</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>MORE</h3>
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contacts</a></li>
+        <li><a href="#">Online chat</a></li>
+        <li><a href="#">Test drive</a></li>
+        <li><a href="#">Car configurator</a></li>
+        <li><a href="#">Loan calculation</a></li>
+        <li><a href="#">News and promotions</a></li>
+        <li><a href="#">Become a dealer</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"><svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.94187 0.0977597L14.8169 3.76434C14.9344 3.82667 15 3.91134 15 4.00001L15 7.66661C15 7.80128 14.8481 7.92327 14.6144 7.9746C14.3806 8.02627 14.1119 7.9976 13.9331 7.90227L7.50001 4.47134L1.06687 7.90226C0.888133 7.99759 0.619364 8.02626 0.385633 7.97459C0.151874 7.92326 -5.96046e-08 7.80126 -5.96046e-08 7.66659L-5.96046e-08 3.99999C-5.96046e-08 3.91132 0.0656242 3.82667 0.183134 3.76433L7.05813 0.0977282C7.30249 -0.0325818 7.6975 -0.0325818 7.94187 0.0977597Z" fill="white"/>
+</svg>
+</button>
+</footer>
+
+<body>
+</body>
+</html>
